@@ -23,7 +23,10 @@ namespace Bin2Dec
 
             Bin bin = new Bin(binstring);
 
+            int equiv = bin.Convert();
 
+            Console.WriteLine();
+            Console.WriteLine($"{bin.Binary}(2) => {equiv}(10)");
 
 
             Console.ReadKey();

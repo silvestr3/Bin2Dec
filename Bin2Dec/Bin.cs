@@ -31,5 +31,23 @@ namespace Bin2Dec
 
             return true;
         }
+
+        public int Convert()
+        {
+            string bin = this.Binary;
+            int sum = 0;
+            string rev = new string(bin.Reverse().ToArray());
+
+            for(int i = 0; i < rev.Length; i++)
+            {
+                if (rev[i] == '1') {
+                    int pow = (int)Math.Pow(2, i);
+                    sum += pow;
+
+                }
+            }
+
+            return sum;
+        }
     }
 }
