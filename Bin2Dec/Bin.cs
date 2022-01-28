@@ -15,6 +15,21 @@ namespace Bin2Dec
             this.Binary = bin;
         }
 
+        public static bool ValidBin(string bin)
+        {
+            foreach(char c in bin)
+            {
+                if(c != '1' && c != '0')
+                {
+                    return false;
+                }
+            }
+            if(bin.Length != 8)
+            {
+                return false;
+            }
 
+            return true;
+        }
     }
 }

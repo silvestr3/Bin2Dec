@@ -10,7 +10,23 @@ namespace Bin2Dec
     {
         static void Main(string[] args)
         {
-            Console.WriteLine()
+            Prompt:
+            Console.Write("Enter binary string to convert (8 bits): ");
+            string binstring = Console.ReadLine();
+
+            if (!Bin.ValidBin(binstring))
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid format for binary number");
+                goto Prompt;
+            }
+
+            Bin bin = new Bin(binstring);
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
