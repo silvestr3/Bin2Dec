@@ -13,7 +13,7 @@ namespace Bin2Dec
             Prompt:
             Console.Write("Enter binary string to convert (8 bits): ");
             string binstring = Console.ReadLine();
-
+             
             if (!Bin.ValidBin(binstring))
             {
                 Console.Clear();
